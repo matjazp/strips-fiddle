@@ -1,6 +1,29 @@
 STRIPS-Fiddle
 ======
 
+As this is not available anymore on Heroku free tier, here is the quick and dirty way to run this on Docker Desktop
+
+To build local image:
+
+```
+git clone github.com/matjazp/strips-fiddle
+
+cd strips-fiddle
+
+docker build -t strips-fiddle:latest .
+```
+
+To run interactively:
+
+```
+docker run --rm --init -p 3000:3000 strips-fiddle:latest
+```
+
+App is running on port 3000. To stop, just Ctrl-C.
+
+
+======
+
 An online editor for creating [STRIPS](https://en.wikipedia.org/wiki/STRIPS) artificial intelligence planning programs using [PDDL](https://en.wikipedia.org/wiki/Planning_Domain_Definition_Language).
 
 Run your favorite STRIPS PDDL programs right in the web browser.
